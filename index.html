@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>میرا لائیو سسٹم</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f0f2f5; padding: 20px; text-align: center; }
+        .module { background: white; padding: 15px; margin: 10px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        input { padding: 10px; width: 90%; margin: 5px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <h1>میرے 10 شعبوں کا سسٹم</h1>
+
+    <div class="module">
+        <h3>تعلیم: نمبر کیلکولیٹر</h3>
+        <input type="number" id="obt" placeholder="حاصل کردہ نمبر">
+        <input type="number" id="total" placeholder="کل نمبر">
+        <button onclick="calculate()">فیصد نکالیں</button>
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function calculate() {
+            let obt = document.getElementById('obt').value;
+            let total = document.getElementById('total').value;
+            let res = (obt / total) * 100;
+            document.getElementById('result').innerText = "نتیجہ: " + res.toFixed(2) + "%";
+        }
+    </script>
+
+</body>
+</html>
